@@ -7,14 +7,14 @@
 </head>
 <body>
 
-    <h1>Log in Page</h1>
+    <h1>Please Log in To Continue</h1>
 
     <form id="myForm">
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname" placeholder="First Name"><br>
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
-        <input type="submit" value="Submit">
+        
       </form> 
 
     <button class="js-next-button">Next</button>
@@ -40,7 +40,7 @@
             console.log('Form Data:', formData)
 
             localStorage.setItem('formData', JSON.stringify(formData));
-      alert('Form data saved to local storage.');
+    
     }
         
 
