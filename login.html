@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Page</title>
+</head>
+<body>
+
+    <h1>Log in Page</h1>
+
+    <form id="myForm">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="First Name"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+
+    <button onclick="extractFormValues()">Next</button>
+
+
+    <script>
+
+        function extractFormValues () {
+            const form = document.getElementById('myForm');
+            const formData = {};
+            Array.from(form.elements).forEach(element => {
+                formData[element.name] = element.value;
+            });
+            console.log('Form Data:', formData)
+        }
+
+
+    </script>
+</body>
+</html>
